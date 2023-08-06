@@ -2,7 +2,8 @@
 photos/
 
 # Files
-last_number.txt
+*.txt
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
