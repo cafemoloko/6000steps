@@ -1,6 +1,6 @@
 # checks the last number used (info saved in the last_number.txt file) and starts from the next one
 # renames files to the format 'YYYYMMDD_XXXX.jpg' where XXXX represents the four digit number
-# moved renamed files to the 'renamed' folder
+# moves renamed files to the 'renamed' folder
 # supports only JPG files
 
 import os
