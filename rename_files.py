@@ -4,17 +4,8 @@
 # supports only JPG files
 
 import os
+from utils import get_last_number, update_last_number, print_last_number
 
-
-def get_last_number(filename):
-    if os.path.exists(filename):
-        with open(filename, "r") as file:
-            return int(file.read())
-    return 0
-
-def update_last_number(filename, number):
-    with open(filename, "w") as file:
-        file.write(str(number))
 
 def rename_move_images(directory):
     renamed_folder = "photos/renamed"
@@ -28,7 +19,7 @@ def rename_move_images(directory):
     if not any(filename.endswith('.jpg') for filename in file_list):
         print("No JPG files found in the folder. Upload files to the folder and try again.")
 
-    last_number = get_last_number("last_number.txt") + 1
+    last_number = get_last_number() + 1
 
     for filename in file_list:
         if filename.endswith('.jpg'):
@@ -40,15 +31,7 @@ def rename_move_images(directory):
             os.rename(src, dst)
             last_number += 1
 
-    update_last_number("last_number.txt", last_number - 1)
-
-    # "last_number -1" is to ensure the correct last number, because the for loop adds 
-    # one extra number after the last loop run.
-    
-def print_last_number():
-    filename = "last_number.txt"
-    last_number_used = get_last_number(filename)
-    print(f'Last photo number: {last_number_used}')
+    update_last_number(last_number - 1)
 
 
 if __name__ == "__main__":

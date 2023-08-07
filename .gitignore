@@ -4,6 +4,8 @@ photos/
 # Files
 *.txt
 *.csv
+*.html
+*.js
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

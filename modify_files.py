@@ -7,17 +7,10 @@
 # "to_resize" folder is temporary. The input directory for the files to be resized should be "renamed"
  
 
-from PIL import Image
 import os
+from PIL import Image
+from utils import get_last_number
 
-
-def get_last_number():
-    if os.path.exists('last_number.txt'):
-        with open('last_number.txt', 'r') as f:
-            last_number = int(f.read())
-        return last_number
-    else:
-        return 0
 
 def resize_images(input_dir, output_dir):
     if not os.path.exists(output_dir):
