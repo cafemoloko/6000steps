@@ -16,7 +16,7 @@ def get_geolocation(image_path):
     return None
 
 if __name__ == "__main__":
-    folder_path = "/home/karolina/6000steps/photos/to_resize"
+    folder_path = "/home/karolina/6000steps/photos/backup"
     csv_filename = "geolocation.csv"
 
     csv_exists = os.path.exists(csv_filename)

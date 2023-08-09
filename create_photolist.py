@@ -3,7 +3,7 @@
 import os
 
 directory_path = './photos/thumbnails'
-output_file = 'photoList.txt'
+output_file = 'photo_list.txt'
 
 try:
     filenames = [filename for filename in os.listdir(directory_path) if filename.endswith('.jpg')]

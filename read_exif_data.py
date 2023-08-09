@@ -49,7 +49,7 @@ def process_image(file_path):
                 software, created_on
             ])
 
-folder_path = 'photos/to_resize'
+folder_path = 'photos/backup'
 jpg_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.jpg')]
 
 for jpg_file in jpg_files:
