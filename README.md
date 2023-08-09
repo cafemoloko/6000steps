@@ -1,12 +1,11 @@
 # 6000steps
 
 ## Supporting scrips
-* rename_files.py
-    * assigns proper file name
-    * moves renamed files to another folder
-* modify_files.py
+* process_files.py
+    * renames files
     * resizes files
     * creates thumbnails
+    * backup files
 * read_exif_data.py
     * fetches Exif Data from jpg files and writes to csv
 * read_gps_info.py
